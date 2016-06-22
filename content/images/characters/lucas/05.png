@@ -404,7 +404,7 @@
             <section>
             <div id="searchHome" style="auto">
                 <form name="form1" method="get" action="/web/form-submit.jsp">
-		    <input type="text" name="url" value="http://projectmgame.com//content/images/characters/lucas/05.png" size="40" onfocus="javascript:this.focus();this.select();" >
+		    <input type="text" name="url" value="http://projectm.kfeavel.com//content/images/characters/lucas/05.png" size="40" onfocus="javascript:this.focus();this.select();" >
 		    <button type="submit" name="type" value="replay">Latest</button>
 		    <button type="submit" name="type" value="urlquery">Show All</button>
                 </form>
@@ -426,7 +426,7 @@
 	</div>
 	<div class="wm-nav-link-div">
 	
-		Would you like to try the <a href="/web/20150322145645/http://projectmgame.com//content/images/characters/lucas/05.png">previous</a> date?
+		Would you like to try the <a href="/web/20150322145645/http://projectm.kfeavel.com//content/images/characters/lucas/05.png">previous</a> date?
 		
 	</div>
 
