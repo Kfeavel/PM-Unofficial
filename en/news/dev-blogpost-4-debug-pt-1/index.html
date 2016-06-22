@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - 3.5 Blogpost #4: Debug Mode Pt. 1</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectmgame.com/assets/styles/960.css" />
+  <script src="http://projectmgame.com/assets/jquery.js"></script>
+  <script src="http://projectmgame.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectmgame.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectmgame.com/en/"><img src="http://projectmgame.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectmgame.com/en/">Home</a></li>
+				<li><a href="http://projectmgame.com/en/about">About</a></li>
+				<li><a href="http://projectmgame.com/en/download">Download</a></li>
+				<li><a href="http://projectmgame.com/en/characters">Characters</a></li>
+				<li><a href="http://projectmgame.com/en/stages">Stages</a></li>
+				<li><a href="http://projectmgame.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.6</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>3.5 Blogpost #4: Debug Mode Pt. 1</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">August 12, 2014</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectmgame.com/en/news/dev-blogpost-4-debug-pt-1"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=3.5 Blogpost #4: Debug Mode Pt. 1 http://projectmgame.com/en/news/dev-blogpost-4-debug-pt-1 %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectmgame.com/en/news/dev-blogpost-4-debug-pt-1"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p><center><img src="http://projectmgame.com//content/images/news/debug1-1.jpg" /><br />
+<em>Good news, everyone!</em></center></p>
+
+<p><br /> We've got something exciting for you today! Veterans to the Smash Bros series may remember that Super Smash Bros. Melee has a debug mode accessible via Action Replay. This debug mode has a lot of features, from frame advance, to hitbox/hurtbox display, to invincibility and vulnerability display, and more. </p>
+
+<p><br /><center><img src="http://projectmgame.com//content/images/news/debug1-2.png" /><img src="http://projectmgame.com//content/images/news/debug1-3.png" /><br />
+<em>Left: Standard Melee. Right: Melee with Debug Mode and Hitbox/Hurtbox Display enabled.</em></center></p>
+
+<p><br />For years we have sought to implement something similar for Project M, not only for our own developmental uses but for the community's use. Today, it brings us great pleasure to announce that due to the efforts of our lead coder, Magus, we have succeeded in bringing a new Debug Mode to Project M 3.5! To be clear, this is <b>not</b> an official development tool mistakenly left on this disc and later uncovered as Melee's Debug feature was. Rather, this new Debug Mode was constructed by Magus from the ground up after countless hours of hard work. </p>
+
+<p><br /></p>
+
+<p>Here we will be going into detail about the features of this debug mode. This mode is very feature-rich; while it may not have EVERY feature that its predecessor does, it introduces a few new touches that Melee's didn't that we're sure you're going to love. Please bear with us, as this blogpost may be quite lengthy and technical. If you're new to the series' inner workings and don't understand everything immediately, don't worry. All will be clear when the mode gets released.</p>
+
+<p><br /></p>
+
+<p>Please note that the following commands assume a GameCube Controller is being used. We hope to put out instructional materials for all supported controller setups in due time, but for now we'll be sticking with the trusty classic from the 2000s. All images and animated gifs are captured on WarioWare to ensure the lowest filesize. With the formalities out of the way, let's get right into it!</p>
+
+<p><br /><center><img src="http://projectmgame.com//content/images/news/debug1-4.png" /><img src="http://projectmgame.com//content/images/news/debug1-5.png" /></center></p>
+
+<p><br />This new Debug Mode has an unusual input combination, R + L + Dpad Down, to avoid accidental toggling during regular gameplay. Of course, Debug Mode comes stocked with a fully functional Frame Advance mode in order to gather frame data, test punishes, and find new combos to make use of. Press Start with Debug Mode activated to freeze gameplay and then advance frames with your Z button (normal start function is performed with X + Dpad Up). Input buttons by holding them before pressing Z. That's all well and useful, but the real magic happens when you press R + Dpad Right.</p>
+
+<p><br /></p>
+
+<p>Immediately available to you after inputting R + Dpad Right are the following features: <br />
+Hitboxes displayed in red (almost all hitboxes display properly). Pressing R+ Dpad Right a second time will enable a representation of hitbox interpolation. Interpolation is a term used to describe the phenomenon that hitboxes undergo when active for more than 1 frame; the hitboxes are present where they are the current frame, the previous frame, and everywhere in-between. <br />
+<center><br />
+<img src="http://projectmgame.com//content/images/news/debug1-6.gif" /><br />
+<em>Sheik Forward-Tilts under different settings. Hitbox Display Off | On | Interpolation Enabled</em><br />
+</center><br/><br />
+Grab collisions displayed in purple and inert collisions (usually ones that trigger something by proximity) displayed in grey.<br />
+<center><br />
+<img src="http://projectmgame.com//content/images/news/debug1-7.gif" /><br />
+<em>Snake's Up-Smash Mortar utilizes an inert collision to trigger the explosion on contact in addition to activating when it hits the ground. Meanwhile, Snake shows his grab-boxes.</em><br />
+</center><br /><br />
+Respawn-type invincibility represented with a green overlay on the character. This type of invincibility is hittable, but unaffected. Regular type invincibility (intangibility, granted by actions such as air dodge, spotdodge, and rolls) represented with a blue overlay on the character. This type of invincibility is unhittable.<br />
+<center> <br />
+<img src="http://projectmgame.com//content/images/news/debug1-8.gif" /><br />
+<em>Marth Forward Smashes a Mario who undergoes both types of invincibility.</em><br />
+</center><br /><br />
+Armor display. Super armor displays in a light blue, Knockback-based armor displays in cyan that varies in intensity based on its strength, Subtractive KB armor (such as Yoshi's Double Jump) displays in violet, and Damage-based KB armor displays in red.<br />
+<center><br />
+<img src="http://projectmgame.com//content/images/news/debug1-9.gif" /><br />
+<em>Ike's Fully Charged Eruption has true Super Armor, while his regular Eruption just has Knockback-threshold armor. Yoshi demonstrates his Subtractive Armor.</em><br />
+</center><br />
+<center><br />
+<img src="http://projectmgame.com//content/images/news/debug1-10.gif" /><br />
+<em>Bowser shows off his varying Armor levels while in Debug Mode: 80, 140, and 200 KB.</em><br />
+</center><br /></p>
+
+<p>That's all we've got for you today. We know you're eager to get your hands on this incredible new tool but please be patient for now. We are deep in 3.5 development, and have been developing Debug Mode within the 3.5 code set. Taking time to test, polish, and publicly support Debug Mode for a 3.02 release update would unfortunately take too much precious time away from 3.5 development. However, please stay tuned tomorrow for our second blogost on Debug Mode... we've got a few more features to reveal to you! <br /><br />
+See you tomorrow,<br />
+-The Project M Dev Team</p>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.collapse').hide();
+	});
+
+	$('.change_icon').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+
+        $('.change_title').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+	</script>
+  
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+ 
+<script>
+	var rnd = Math.random();
+	if(rnd < (0.02127659574468085 + .04 + .07)) {
+		console.log("Debug A " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	} else {
+		console.log("Debug B " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	}
+</script>
+ 
+</body>
+
+</html>

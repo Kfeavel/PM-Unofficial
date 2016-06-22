@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - 3.5 Blogpost #6: Ledge Invincibility</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectmgame.com/assets/styles/960.css" />
+  <script src="http://projectmgame.com/assets/jquery.js"></script>
+  <script src="http://projectmgame.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectmgame.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectmgame.com/en/"><img src="http://projectmgame.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectmgame.com/en/">Home</a></li>
+				<li><a href="http://projectmgame.com/en/about">About</a></li>
+				<li><a href="http://projectmgame.com/en/download">Download</a></li>
+				<li><a href="http://projectmgame.com/en/characters">Characters</a></li>
+				<li><a href="http://projectmgame.com/en/stages">Stages</a></li>
+				<li><a href="http://projectmgame.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.6</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>3.5 Blogpost #6: Ledge Invincibility</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">September 30, 2014</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectmgame.com/en/news/dev-blogpost-6-ledge-invincibility"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=3.5 Blogpost #6: Ledge Invincibility http://projectmgame.com/en/news/dev-blogpost-6-ledge-invincibility %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectmgame.com/en/news/dev-blogpost-6-ledge-invincibility"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p>Hello everyone, sorry for the delay! </p>
+
+<p><br /></p>
+
+<p>The Project M Dev Team has been spending a great deal of time and effort this time around touching up individual characters, and there is certainly a lot to get excited about there. Of course, there has also been a lot of work on improving the universal gameplay mechanics and engine. A number of changes have been implemented to make interactions more fluid and dynamic. This blogpost and the following one will go into detail about these mechanic changes.</p>
+
+<p><br /></p>
+
+<p>As you may know, we’ve put out a few blogposts last month regarding character recovery and tether ledge mechanics. For 3.5, we’ve taken a good look at many ledge mechanics to properly balance offstage gameplay. One such mechanic is ledge invincibility. In previous Smash titles and versions of Project M, the ledge has been a controversial position, conceptually being a poor place to be, yet in some cases allowing stalling by abusing the invincibility granted upon grabbing the ledge. </p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/ledgestall-firefox.gif" /> </p>
+
+<p><em>Fox stays entirely invincible from attack while simultaneously protecting the ledge from would-be grabbers with hitboxes of his own.</em></p>
+
+<p></center><br /></p>
+
+<p>We’ve implemented a solution meant to curb abuse of ledge invincibility for stalling purposes. After a character regrabs the ledge five times without touching the ground, that character no longer receives invulnerability for grabbing the ledge again (except for a few frames during the initial ledge snap) until he or she either lands on the stage or gets hit.</p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/ledge-ganon.gif" /><img src="http://projectmgame.com/content/images/news/ledge-fox.gif" /><br />
+<em>After grabbing the ledge 5 times, Fox and Ganondorf become quite vulnerable to attack.</em></p>
+
+<p></center><br /></p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/ledge-shino.gif" /> </p>
+
+<p><em>Even with a Special that grants invincibility, Sheik leaves herself open to punishment if she fails to go onstage quickly.</em></p>
+
+<p></center><br /></p>
+
+<p>Five ledge grabs is a relatively high number that should guarantee that this will only affect players looking to stall the game, so very few players will ever see this limit come into play. </p>
+
+<p><br /></p>
+
+<p>We’ve done a lot of internal testing and asked high level Melee and Project M players alike what they think. Even in talking with top level players who have put a lot of time into practicing ledge tactics for the specific abuse of this mechanic, we still received positive feedback. We hope that this change will allow all of the common existing ledge interactions to remain unchanged while preventing the exploitation of the ledge purely for stalling purposes.</p>
+
+<p><br /></p>
+
+<p>With this new ledge counter in place we hope to see tournament matches filled with even more action and interaction, reinforcing engaging gameplay that keeps both players and spectators on the edge of their seats... rather than on the edge of the stage.</p>
+
+<p><br /></p>
+
+<p>The next blogpost will discuss a few other mechanics changes we have been cooking up for you.<br />
+<br />Until next time,<br />
+-The PM Dev Team</p>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.collapse').hide();
+	});
+
+	$('.change_icon').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+
+        $('.change_title').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+	</script>
+  
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+ 
+<script>
+	var rnd = Math.random();
+	if(rnd < (0.02127659574468085 + .04 + .07)) {
+		console.log("Debug A " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	} else {
+		console.log("Debug B " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	}
+</script>
+ 
+</body>
+
+</html>

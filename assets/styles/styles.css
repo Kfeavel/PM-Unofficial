@@ -1,0 +1,832 @@
+n/* Style reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+strong, b {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+/* End of style reset */
+
+html {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  background: #030312;
+  color: #fff;
+  margin: 0px;
+}
+
+a {
+  color: #8fa6ff;
+  text-decoration: none;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+  outline: 0px;
+}
+
+a:hover {
+  color: #bfcbfa;
+}
+
+img {
+  outline: 0;
+  border: 0;
+}
+
+clear {
+	display: block;
+	height: 10px;
+	clear: both;
+}
+
+hr {
+	border-color: #364086;
+}
+
+/* Header Block */
+
+.debug { position: absolute; }
+
+header {
+	height: 270px;
+	width: 100%;
+	border-bottom: 5px solid white;
+	background: url('/assets/images/headers/new.jpg') top center no-repeat;
+}
+
+.logo {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+.logo a {
+	margin: 0px auto; 
+	width: 750px; 
+	height: 260px;
+	display: block;
+}
+
+.logo img { height: 100%; }
+
+/* End Header Styles */
+
+
+/* Navigation Menu */
+
+.menu_div {
+	background: rgba(0, 0, 0, .75);
+	position: absolute;
+	top: 234px;
+	width: 100%;
+}
+
+nav.menu {
+	font-size: 18px;
+	text-align: center;
+}
+
+nav.menu li {
+	margin: 0px -3px;
+	display: inline-block;
+	width: 161px;
+}
+
+nav.menu li a {
+	font-family: 'Source Sans Pro', sans-serif;
+	padding-top: 8px;
+	height: 28px;
+	display: block;
+	width: 100%;
+	color: white;
+	-moz-transition: all .15s;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+}
+
+nav.menu li a.active {
+	background: #263279;
+}
+
+nav.menu li a:hover {
+	background: #39468a;
+}
+
+.versions { 
+	position: relative;
+	margin-top: 12px;
+	font-size: 10px;
+	font-family: Helvetica, Arial, sans-serif;
+	width: 960px;
+	margin: 0px auto;
+}
+.publicVersion { position: absolute; left: 0px; text-align: left; top: -60px; }
+.devVersion { position: absolute; right: 0px; text-align: right; top: -60px; }
+#devVersNum { display: inline-block; }
+
+/* End Navigation Styles */
+
+/* Content area */
+
+.main {
+	padding: 15px 0px;
+	background: #17142d url('/assets/images/bg-galaxy3-6.png') no-repeat top center;
+	background-size: cover;
+	background-attachment: fixed;
+	border-bottom: 5px solid white;
+}
+
+.breadcrumbs li {
+	display: inline-block; 
+	list-style-type: none;
+}
+
+#sidebar {
+	float: right;
+}
+
+#sidebar h1 {
+	text-align: center;
+	font-size: 30px;
+}
+
+.partners a {
+	width: 280px;
+	height: 48px;
+	display: block;
+	margin-bottom: 5px;
+	background: url('/assets/images/Partners.png');
+}
+
+.partners a.tourneylocator { background-position: 0px 0px; }
+
+.partners a:hover { background-position-x: -280px; }
+
+.external a {
+	width: 280px;
+	height: 48px;
+	display: block;
+	margin-bottom: 5px;
+	background: url('/assets/images/External Links.png');
+}
+
+.external a.facebook { background-position: 0px 0px; }
+.external a.forums { background-position: -280px 0px; }
+.external a.irc { background-position: -560px 0px; }
+.external a.subreddit { background-position: -840px 0px; }
+.external a.youtube { background-position: -1120px 0px; }
+
+.external a:hover { background-position-y: -48px; }
+
+.external a:last-child { margin-bottom: 0px; }
+
+.content .numberlist {
+	list-style-type: decimal;
+	margin-left: 20px;
+}
+
+.content .bulletlist {
+	list-style-type: disc;
+	margin-left: 20px;
+}
+
+.content {
+	margin-bottom: 10px;
+}
+
+.content h1 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 36px;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 4px;
+	line-height: 1em;
+}
+
+.content section h1 {
+	margin: 12px 0px;
+	font-size: 28px;
+}
+
+.content img { max-width: 590px; }
+.content img.inline { display: inline-block; }
+.content img.grid { width: 295px; }
+
+.content section {
+	background: #131736;
+	border: 2px solid #364086;
+	margin-bottom: 10px;
+	padding: 10px;
+	-webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow:    -1px 2px 2px rgba(0, 0, 0, 0.75);
+	box-shadow:         -1px 2px 2px rgba(0, 0, 0, 0.75);
+	text-shadow:         1px 1px 0px rgba(0, 0, 0, 0.75);
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+
+.download_box {
+	padding: 6px 0px;
+	border: 1px solid white;
+	width: 594px;
+}
+
+.download_box div { font-size: 16px; display: inline-block; }
+.download_box > div { width: 576px; padding: 2px 10px; }
+.download_box > div > div { float: right; }
+
+.char_page section h1 {
+	margin: 0px 0px 12px;
+}
+
+.char_list {	text-align: center; }
+.char_list > section > img { margin: 0px 2px; }
+
+.char_list a {
+	margin: 0px 2px;
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 56px;
+	border: 1px solid transparent;
+	-moz-transition: border .15s;
+    -webkit-transition: border .15s;
+    -o-transition: border .15s;
+    transition: border .15s;
+}
+
+.char_list a:hover { border: 1px solid white; }
+
+.char_list a, .char_list img { 
+	width: 80px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+#sidebar.char_list a, #sidebar.char_list img { width: 58px; height: 40px; }
+
+.char_img, .char_slides {
+	width: 320px;
+	height: 240px;
+	float: right;
+	border: 3px solid #364086;
+	margin-left: 10px;
+	position: relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.char_slides img {
+	position: absolute; 
+	top: 0px; 
+	width: 320px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.main .stage_list { display: none; }
+
+#stages.stage_list { display: block; }
+
+.stage_page h1 { text-align: center; }
+.stage_page section h1 { margin: 0px 0px 12px; }
+.stage_page section { min-height: 186px; }
+
+.stage_list { text-align: center; }
+.stage_list > section > img { margin: 0px 2px; }
+.stage_list section { vertical-align: top; }
+
+.stage_list a {
+	margin: 2px;
+	display: inline-block;
+	position: relative;
+	width: 90px;
+	height: 60px;
+	overflow: hidden;
+	border: 1px solid transparent;
+	-moz-transition: border .15s;
+    -webkit-transition: border .15s;
+    -o-transition: border .15s;
+    transition: border .15s;
+}
+
+.stage_list img { width: 90px; margin-top: -15px; }
+
+.stage_list a:hover { border: 1px solid white; }
+
+.stage_list a, .stage_list img { 
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	vertical-align: top;
+}
+
+.stage_img {
+	width: 176px;
+	height: 176px;
+	float: right;
+	border: 3px solid #364086;
+	margin-left: 10px;
+	position: relative;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+.social_links {
+	position: absolute;
+	right: 0px;
+	top: -6px;
+	text-align: center;
+}
+
+.social {
+	padding: 2px 4px 0px;
+	margin: 2px;
+	display: inline-block;
+	width: 70px;
+	height: 20px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	color: white;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	opacity: .6;
+	-moz-transition: all .15s;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+}
+
+.content section .info_block { 
+	font-size: 12px;
+	position: relative;
+}
+
+.social:hover { color: white; opacity: 1; }
+
+.social.facebook { background: #425f9c; }
+.social.facebook:hover { background: #6987c6; }
+
+.social.twitter { background: #01b7ee; }
+.social.twitter:hover { background: #60d3f6; }
+.social.twitter i { margin-right: 5px; }
+
+.social.reddit { background: #8fb5db; }
+.social.reddit:hover { background: #acc9e6; }
+.social.reddit i { margin-right: 5px; }
+
+.changelog {
+	min-height: 29px;
+	width: 577px;
+	padding: 5px 8px 2px;
+	margin: 4px 0px;
+	border: 1px solid #2e3964;
+	position: relative;
+}
+
+.change_icon {
+	display: inline-block;
+    margin-top: 0px;
+    padding: 2px 8px;
+    position: relative;
+    z-index: 2;
+	cursor: pointer;
+}
+
+.change_title {
+	position: absolute;
+    display: block;
+    height: 46px;
+    left: 0px;
+    top: 0px;
+    line-height: 42px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 58px;
+	cursor: pointer;
+}
+
+.change_highlight {
+	background-color: #00457A;
+    padding: 0px 5px 1px;
+    -webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	display: inline-block;
+}
+
+.changelog:hover .change_icon, .changelog:hover .change_title {
+	background: #192246;
+}
+
+.changelog:hover .collapse:after {
+	content: "X";
+	display: block;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	background: #2e3964;
+	color: #ccddee;
+	padding: 6px;
+	line-height: 10px;
+	cursor: pointer;
+}
+
+.content .changelog h1 {
+	margin: 0px;
+	font-size: 16px;
+	padding: 5px;
+	display: block;
+	background: #5d6ca6;
+	border-bottom: 1px solid #2e3964;
+}
+
+.changelog .collapse {
+	padding: 2px 5px;
+}
+
+/* End content styles */
+
+/* Character Page styles */
+
+.simple {
+	display: block;
+}
+
+.fulltext {
+	display: none;
+}
+
+.viewSwitch {
+	position: absolute;
+	top: 16px;
+	right: 10px;
+	font-weight: bold;
+	padding: 2px 15px;
+	background: #131736;
+	border: 2px solid #364086;
+	-webkit-border-top-left-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright: 4px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.charSide {
+	float: right;
+}
+
+.charPreview {
+	width: 300px;
+	text-align: center;
+	position: relative;
+}
+
+.charPreview:hover .charTooltip {
+	top: 210px;
+	opacity: 1;
+}
+
+.charTooltip {
+	background: rgba(0,0,0,.5);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	padding: 4px 8px;
+	border-radius: 4px;
+	width: 250px;
+	margin: 0px auto;
+	font-size: 12px;
+	position: absolute;
+	left: 25px;
+	top: 200px;
+	opacity: 0;
+	transition: all .25s;
+}
+
+.moveset {
+	float: left;
+	margin-bottom: 10px;
+	width: 610px;
+}
+
+.charBox {
+	width: 300px;
+	float: left;
+	margin-top: 10px;
+	position: relative;
+	text-align: center;
+}
+
+.moveset .charBox:first-child {
+	margin-right: 10px;
+}
+
+.src64, .srcMelee, .srcBrawl, .srcPM {
+	margin: 2px 7px;
+	font-weight: bold;
+}
+
+.src64 { color: #ffff00; }
+.srcMelee { color: #3494e5; }
+.srcBrawl { color: #e41a18; }
+.srcPM { color: #5a55c6; }
+
+#statChart {
+	margin-top: -50px;
+}
+
+.charBox .charSlides, .charBox .charIMG {
+	width: 300px;
+	height: 225px;
+}
+
+.charSlides img, .charIMG img {
+	position: absolute;
+	left: 0px;
+	top: 0px; 
+	width: 300px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.charBox .moveTitle {
+	font-weight: bold;
+	font-size: 26px;
+	text-align: center;
+	padding: 15px 0px 7px;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+	position: absolute;
+	width: 100%;
+	top: 185px;
+	z-index: 5;
+	-webkit-border-bottom-right-radius: 4px;
+	-webkit-border-bottom-left-radius: 4px;
+	-moz-border-radius-bottomright: 4px;
+	-moz-border-radius-bottomleft: 4px;
+	border-bottom-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	margin-bottom: 4px;
+}
+
+/* End character page styles */
+
+/* Splash page */
+
+.main.splash {
+	margin-top: 100px;
+	border-top: 5px solid white;
+	text-align: center;
+}
+
+/* End splash */
+
+/* Stream page styles */
+
+.streampage h1, .streampage section { text-align: center; }
+.streamblock a { color: white; }
+
+.streamblock {
+	display: inline-block;
+	width: 295px;
+	margin: 5px;
+	position: relative;
+	cursor: pointer;
+}
+
+.streamblock:hover .streamtitle { opacity: 1; top: 4px; }
+.streamblock:hover .streamthumb { opacity: .75; }
+.streamblock:hover .streamname { background: none; height: 48px; padding-top: 24px; top: 57px; }
+
+.streamblock img {
+	width: 100%;
+}
+
+.streamtitle {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 1px;
+	padding: 0px 5px;
+	box-sizing: border-box;
+	word-break: break-all;
+	opacity: 0;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	z-index: 1;
+}
+
+.streamviewers {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	text-shadow: 0px 1px 2px black;
+	font-weight: bold;
+	font-size: 16px;
+	z-index: 1;
+}
+
+.streamname {
+	position: absolute;
+	width: 295px;
+	text-align: center;
+	font-size: 24px;
+	top: 75px;
+	text-shadow: 0px 1px 2px black;
+	background: rgba(0,0,0,.75);
+	height: 24px;
+	padding-top: 6px;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+	-moz-transition: all .2s;
+	z-index: 1;
+}
+
+.streamthumb {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0;
+	transition: opacity .2s;
+	-webkit-transition: opacity .2s;
+	-moz-transition: opacity .2s;
+	z-index: 0;
+}
+
+/* End stream page */
+
+/* Announcement page styles */
+
+.announce .menu_div {
+	z-index: 1;
+	top: 10px;
+	overflow: hidden;
+}
+
+.announce .wrapper {
+	padding-top: 125px;
+	height: 375px;
+}
+
+.announce .main {
+	z-index: 0;
+	height: 500px;
+	padding: 0px;
+}
+
+.announce article {
+	margin-top: 150px;
+	position: relative;
+}
+
+.silhouette {
+	bottom: 20px;
+	left: 0px;
+	position: absolute;
+}
+
+/* End announcement styles */
+
+/* Footer styles */
+
+footer {
+	padding-top: 15px;
+	height: 50px;
+	text-align: center;
+}
+
+/* End Footer */
+
+/* Icomoon fonts */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot');
+	src:url('fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/icomoon.woff') format('woff'),
+		url('fonts/icomoon.ttf') format('truetype'),
+		url('fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'icomoon';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+.icon-facebook, .icon-twitter, .icon-reddit {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-facebook:before {
+	content: "\e000";
+}
+.icon-twitter:before {
+	content: "\e001";
+}
+.icon-reddit:before {
+	content: "\e002";
+}
+
+/* End Icomoon */

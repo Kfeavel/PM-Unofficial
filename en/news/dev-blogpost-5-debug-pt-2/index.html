@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - 3.5 Blogpost #5: Debug Mode Pt. 2</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectmgame.com/assets/styles/960.css" />
+  <script src="http://projectmgame.com/assets/jquery.js"></script>
+  <script src="http://projectmgame.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectmgame.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectmgame.com/en/"><img src="http://projectmgame.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectmgame.com/en/">Home</a></li>
+				<li><a href="http://projectmgame.com/en/about">About</a></li>
+				<li><a href="http://projectmgame.com/en/download">Download</a></li>
+				<li><a href="http://projectmgame.com/en/characters">Characters</a></li>
+				<li><a href="http://projectmgame.com/en/stages">Stages</a></li>
+				<li><a href="http://projectmgame.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.6</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>3.5 Blogpost #5: Debug Mode Pt. 2</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">August 13, 2014</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectmgame.com/en/news/dev-blogpost-5-debug-pt-2"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=3.5 Blogpost #5: Debug Mode Pt. 2 http://projectmgame.com/en/news/dev-blogpost-5-debug-pt-2 %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectmgame.com/en/news/dev-blogpost-5-debug-pt-2"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p>Greetings everyone,<br />
+<br />Yesterday we <a href="http://projectmgame.com/en/news/dev-blogpost-4-debug-pt-1">announced our Debug Mode</a> and went into detail about its main features we expect the majority of users to want to take advantage of. Today we'd like to go over some of its additional features that we're sure everyone will love. Like yesterday, we'll be describing any additional input commands assuming a GameCube Controller is being used.</p>
+
+<p><br /></p>
+
+<p>With Debug Mode active, on top of all of the features mentioned yesterday, press Y + Dpad Right to enable ledgegrab box view, similar to Melee's. This box is used by the game to determine whether or not your character is able to grab the ledge at any given time.</p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/falconsweetspot.gif" /><br />
+<em>Captain Falcon, the true hero of our story, Falcon Dives to the ledge.</em></center><br /></p>
+
+<p>This feature was present in Melee's Debug Mode as well and we've been using it to more easily fine-tune ledgegrab boxes, as a small addition to the recovery changes we spoke about last week. This should help you practice your edge sweetspots more easily!</p>
+
+<p><br /><center><img src="http://projectmgame.com/content/images/news/ledgegrabboxtoggle.png" /><img src="http://projectmgame.com/content/images/news/scdtoggle.png" /></center></p>
+
+<p><br />Additionally, pressing Y + DPad Left enables a display of the game's Stage Collision Detection (SCD) system. How does the game handle movement and collision detection? Well, at its most fundamental level the Smash engine treats a character like a single point in space. By reading controller inputs and applying corresponding force vectors to the point it can be made to move around in ways that look like running and jumping once a character model and animations are rigged up on top of it. This all-important point is referred to as TopN, and it’s visualized below the character with a white circle graphic.</p>
+
+<p><br />Beyond movement, the game also needs to make the character collide with the stage or other opponents in a realistic manner. In order to do this economically, the Smash engine just looks at certain key bones (usually the neck, hip, shoulders, and knees) to create a simple but dynamic, diamond-shaped collision box. In any given frame the height of the diamond’s top point corresponds to the height of the highest SCD bone, usually the neck, and the outer edges are determined by the current outermost SCD bones, usually the shoulders. While on the ground or during the first 10 frames of air time TopN is always the diamond’s bottom boundary, but after 10 frames of air time the Smash engine dynamically tracks the lowest SCD bone, which is usually one of the knees. The current top, bottom, and side points of the SCD diamond are shown in Debug mode with yellow circle graphics.</p>
+
+<p><br />This SCD diamond is important in many ways. While falling, the game tells a character to land when the bottom SCD point intersects with the plane of the stage. During recovery the diamond’s side point often rides up against the wall or lip of the stage. If you slowly walk into another character the SCD system starts pushing the opponent away when your horizontal SCD points touch.  </p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/fatpenguin.gif" /><img src="http://projectmgame.com/content/images/news/aerialscd.gif" /><br />
+<em>Left: Link pushes a lazy Dedede to show off his collisions. Right: Link does a Neutral-Air to show his landing detection.</em></center><br /></p>
+
+<p>Unfortunately this display has a minor limitation: Brawl has a limit on the number of Graphical Effects it can render at the same time, and as you can imagine having 5 extra GFX rendered every frame eats into that quite a bit. With multiple characters on the screen, some GFX may occasionally fail to display or may flicker briefly while using this feature. We hope you understand and still make use of this mode for research purposes.</p>
+
+<p><br /></p>
+
+<p>Of course, we wanted to give the competitive community as many tools as possible to develop their skills. A new feature to Debug Mode not present in Melee’s Debug Mode that we're very pleased to announce is <strong>Hitstun Display</strong>.</p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/nontumblehitstun.gif" /><br />
+<em>Left: Kirby Up-Tilts a low-percentage Wolf, causing non-tumble hitstun. Right: Kirby does the same to a higher percentage Wolf, causing him to suffer tumble hitstun.</em><br />
+</center><br /></p>
+
+<p>When your character is hit, he or she suffers hitstun and is unable to act, allowing things like combos and tech-chases. With Debug Mode active, a character suffering from hitstun will have a colored overlay. For non-tumble hitstun (hitstun in which the character isn't knocked over and forced into a knockdown, often occurs at low percents), the character receives a yellow overlay. For tumble hitstun, the character receives an orange overlay. </p>
+
+<p><br /></p>
+
+<p>Additionally, on the last frame of hitstun the overlay opacity drops by 50%. This makes it easier to measure combo frame advantage windows using Frame Advance.</p>
+
+<p><center><br />
+<img src="http://projectmgame.com/content/images/news/opacityhitstun.gif" /><br />
+<em>Left: Luigi uses his Forward-Tilt against a low percentage Meta Knight. Right: Meta Knight gets some payback with his Down-Tilt. The last frame of hitstun in each is paused and highlighted.</em><br />
+</center> <br />We're excited to not only use this tool to better develop the game and balance the cast, but to see it empower the community to advance the metagame faster than ever before.<br />
+<br /></p>
+
+<p>If you would like a demonstration of this mode please tune into Low Tier City 2 this weekend, which is being held in Dallas/Fort Worth, Texas. It will be streamed by our friends from <a href="http://twitch.tv/vgbootcamp">VGBootCamp on Twitch.tv</a>. Project M Dev Team Members <a href="https://twitter.com/S3thlon">Sethlon</a> and <a href="https://twitter.com/Strong_Badam">Strong Bad</a> will be doing a demonstration of our new mode immediately preceding the Top 8/Finals on Sunday.<br /><br />
+See you then!<br />
+-The Project M Dev Team</p>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.collapse').hide();
+	});
+
+	$('.change_icon').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+
+        $('.change_title').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+	</script>
+  
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+ 
+<script>
+	var rnd = Math.random();
+	if(rnd < (0.02127659574468085 + .04 + .07)) {
+		console.log("Debug A " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	} else {
+		console.log("Debug B " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	}
+</script>
+ 
+</body>
+
+</html>

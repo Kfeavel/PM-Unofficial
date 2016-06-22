@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - Streams</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectmgame.com/assets/styles/960.css" />
+  <script src="http://projectmgame.com/assets/jquery.js"></script>
+  <script src="http://projectmgame.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectmgame.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectmgame.com/en/"><img src="http://projectmgame.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a href="http://projectmgame.com/en/">Home</a></li>
+				<li><a href="http://projectmgame.com/en/about">About</a></li>
+				<li><a href="http://projectmgame.com/en/download">Download</a></li>
+				<li><a href="http://projectmgame.com/en/characters">Characters</a></li>
+				<li><a href="http://projectmgame.com/en/stages">Stages</a></li>
+				<li><a class="active" href="http://projectmgame.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.6</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+
+<div class="main">
+
+	<div class="container_12">
+		
+		<article class="content grid_12 streampage">
+			<h1>Project M Livestreams</h1>
+			<section>
+				<div>If your game is set to Brawl on Twitch, be sure to include [PM] in your title (With brackets)</div>
+			</section>
+			
+			<section>
+					<div class='streamblock'>
+	<a href='//hitbox.tv/HitboxArena' target='_blank'>
+	<div class='streamtitle'>Pm in the PM #71</div>
+	<div class='streamviewers'>4</div>
+	<div class='streamname'>HitboxArena</div>
+	<div class='streamthumb'></div>
+	<img src='http://edge.sf.hitbox.tv//static/img/media/live/hitboxarena_large_000.jpg' /></a>
+	</div><div class='streamblock'>
+	<a href='//hitbox.tv/NPV' target='_blank'>
+	<div class='streamtitle'>Bowling For Smash 9</div>
+	<div class='streamviewers'>1</div>
+	<div class='streamname'>NPV</div>
+	<div class='streamthumb'></div>
+	<img src='http://edge.sf.hitbox.tv//static/img/media/live/npv_large_000.jpg' /></a>
+	</div>			</section>
+		</article>
+		
+	</div>
+
+</div>
+
+  <script type="text/javascript">
+	$(document).ready(function(){
+		$('.collapse').hide();
+	});
+
+	$('.change_icon').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+
+        $('.change_title').click(function(e) {
+	      $( this ).siblings('.collapse').toggle();
+	});
+	</script>
+  
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+ 
+<script>
+	var rnd = Math.random();
+	if(rnd < (0.02127659574468085 + .04 + .07)) {
+		console.log("Debug A " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	} else {
+		console.log("Debug B " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+	}
+</script>
+ 
+</body>
+
+</html>
