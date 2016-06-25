@@ -1,3 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Project M - About</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectm.kfeavel.com/assets/styles/960.css" />
+  <script src="http://projectm.kfeavel.com/assets/jquery.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectm.kfeavel.com/en/"><img src="http://projectm.kfeavel.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a href="http://projectm.kfeavel.com/en/">Home</a></li>
+				<li><a class="active" href="http://projectm.kfeavel.com/en/about">About</a></li>
+
+				<li><a href="http://projectm.kfeavel.com/en/characters">Characters</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/stages">Stages</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.6</div>
+
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>
+	</div>
+
+	<div class="content">
+    <h1>Smashboards News</h1>
+		<section>
+			<a class="twitter-timeline" data-width="280" data-height="400" data-dnt="true" data-theme="dark" href="https://twitter.com/Smashboards">Tweets by Smashboards</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+		</section>
+	</div>
+
+</div>
+
 <article class="content grid_8">
 
   <h1><p>Project M 3.6 Full Changelist</p>
@@ -111,3 +195,38 @@
 <div class="collapse" style="clear:both"><b>Aerials</b><br />-Neutral Aerial<br />--All hitbox sizes increased from 3 to 4<br /><br /><b>Grabs</b><br />-Standing Grab, Dash Grab, Turnaround Grab<br />--Animations redone or polished, now easier to see her grabbing arm.<br />--Dash Grab can now grab opponents with low crouch if well timed.<br /><br /><b>Throws</b><br />-Up Throw<br />--Angle increased from 82 to 85.<br />--Cooldown -3 (weight dependent)<br />-Down Throw<br />--Angle increased from 60 to 65.<br /><span class="change_highlight">--Hitbox on foot is active for the whole kick and causes knockback<br /><br /><b>Smashes</b><br />-Forward Smash<br />--Hitlag: 0.5x -> 1x<br /><br />-Up Smash<br />--Hits 4 times from 5<br />--SDI multipliers: 0.5x -> 1x<br />--Repeating hand hitboxes desynced from whip hitboxes<br />--Hand hitboxes: KBG: 79 -> 0, BKB: 0 -> 30<br />--Whip outer hitboxes: angle: 110 -> 115<br />--Final hit:<br />---middle hitbox: size 8 -> 7<br />---upper hitbox: size 8 -> 9, y offset: 28 -> 30<br />---better matches the whip's location/curve</span><br /><br /><b>Specials</b><br />-Neutral Special (Paralyzer)<br />--Charged laser speed decreased from 2.1 to 1.5.<br />--No longer reverse hits<br /><br /><span class="change_highlight">-Up Special (Plasma Whip)<br />--launching (hand) hitbox:<br />--0x/0x hitlag/SDI ->1x/1x<br />--angle: 95 -> 90</span><br /><br />-Side Special (Plasma Whip)<br />--Now unclankable<br />--Removed double hit on shield.<br /><br />-Down Special (Flip Jump)<br />--Only able to be used once per air-state. Refreshes on ledge-grab, and tether-reel to the ledge. Does NOT refresh on forced tether-hop due to edgehogging.<span class="change_highlight">-Final Smash (Crystal Flash)<br />--Hold B to transform</span></div></div></p>
   </section>
 </article>
+</div>
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.collapse').hide();
+});
+
+$('.change_icon').click(function(e) {
+      $( this ).siblings('.collapse').toggle();
+});
+
+      $('.change_title').click(function(e) {
+      $( this ).siblings('.collapse').toggle();
+});
+</script>
+
+<footer>
+  <p>PMUnofficial managed by "Auxel"</p>
+Site hosted by <a href="http://github.com">Github Pages</a> <img src="/assets/images/github.png" style="margin-bottom: -4px;">
+</footer>
+
+<script>
+var rnd = Math.random();
+if(rnd < (0.02127659574468085 + .04 + .07)) {
+  console.log("Debug A " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+} else {
+  console.log("Debug B " + rnd + "|" + (0.02127659574468085 + .04 + .07));
+}
+</script>
+
+</body>
+
+</html>
