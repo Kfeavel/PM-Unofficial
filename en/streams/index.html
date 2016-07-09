@@ -8,8 +8,8 @@
   <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
   <meta name="robots" content="index, follow" />
 
-  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
-  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/png" href="http://pmunofficial.com/assets/images/fav-icon.png">
+  <link href='http://pmunofficial.com/assets/styles/styles.css' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="http://pmunofficial.com/assets/styles/960.css" />
   <script src="http://pmunofficial.com/assets/jquery.js"></script>
   <script src="http://pmunofficial.com/assets/jquery.cycle.lite.js"></script>
@@ -71,21 +71,7 @@ $( "#devVersNum" ).load( "/version.php", function() {
 			</section>
 			
 			<section>
-					<div class='streamblock'>
-	<a href='//hitbox.tv/HitboxArena' target='_blank'>
-	<div class='streamtitle'>Pm in the PM #71</div>
-	<div class='streamviewers'>4</div>
-	<div class='streamname'>HitboxArena</div>
-	<div class='streamthumb'></div>
-	<img src='http://edge.sf.hitbox.tv//static/img/media/live/hitboxarena_large_000.jpg' /></a>
-	</div><div class='streamblock'>
-	<a href='//hitbox.tv/NPV' target='_blank'>
-	<div class='streamtitle'>Bowling For Smash 9</div>
-	<div class='streamviewers'>1</div>
-	<div class='streamname'>NPV</div>
-	<div class='streamthumb'></div>
-	<img src='http://edge.sf.hitbox.tv//static/img/media/live/npv_large_000.jpg' /></a>
-	</div>			</section>
+			</section>
 		</article>
 		
 	</div>
@@ -104,11 +90,88 @@ $( "#devVersNum" ).load( "/version.php", function() {
         $('.change_title').click(function(e) {
 	      $( this ).siblings('.collapse').toggle();
 	});
-	</script>
+   </script>
+   <script type="text/javascript">
+    buildHTML = function(tag, html, attrs) {	// you can skip html param
+		if (typeof(html) != 'string') {
+			attrs = html;
+			html = null;
+		}
+		var h = '<' + tag;
+		for (attr in attrs) {
+			if(attrs[attr] === false) continue;
+			h += ' ' + attr + '="' + attrs[attr] + '"';
+		}
+		return h += html ? ">" + html + "</" + tag + ">" : "/>";
+	}
+
+   	$(document).ready(function(){
+		var hitboxStreamData = 0;
+		var twitchStreamData = 0;
+   		$.ajax({
+			datatype: "jsonp",
+			url: "https://api.hitbox.tv/media/live/list?liveonly=true&filter=recent&game=project-m&limit=100",
+			success: function(data){
+				hitboxStreamData = jQuery.parseJSON(data);
+				if(hitboxStreamData.success){
+					hitboxStreamData.livestream.forEach(function(item){
+						var block = buildHTML("div",
+							buildHTML("a",
+								buildHTML("div",item.media_status,{class:"streamtitle"}) +
+								buildHTML("div",item.media_views,{class:"streamviewers"}) +
+								buildHTML("div",item.media_user_name,{class:"streamname"}) +
+								buildHTML("div",{class:"streamthumb"}) +
+								buildHTML("img",{src:"http://edge.sf.hitbox.tv" + item.media_thumbnail}),
+								{
+									href: item.channel.channel_link,
+									target: '_blank'
+								}
+								
+							),
+							{
+								class: 'streamblock'
+							}
+						);
+						$(".streampage>section:last-child").append(block);
+					});
+				}
+			}
+		});
+		$.ajax({
+			database: "jsonp",
+			url: "https://api.twitch.tv/kraken/search/streams?q=%5BPM%5D",
+			success: function(data){
+				twitchStreamData = data.streams;
+				twitchStreamData.forEach(function(item){
+					if(item.game.toLowerCase().indexOf("smash") > -1){
+						var block = buildHTML("div",
+							buildHTML("a",
+								buildHTML("div",item.channel.status,{class:"streamtitle"}) +
+								buildHTML("div",item.viewers.toString(),{class:"streamviewers"}) +
+								buildHTML("div",item.channel.display_name,{class:"streamname"}) +
+								buildHTML("div",{class:"streamthumb"}) +
+								buildHTML("img",{src:item.preview.large}),
+								{
+									href: item.channel.channel_link,
+									target: '_blank'
+								}
+								
+							),
+							{
+								class: 'streamblock'
+							}
+						);
+						$(".streampage>section:last-child").append(block);
+					}
+				});
+			}
+		});
+   	});
+   </script>
   
   <footer>
     <p>Unofficial PM Managed by Auxel. Originally designed and created by <a href="http://warchamp7.com">Warchamp7</a></p>
-	Site hosted by <a href="http://github.com/Kfeavel/PM-Unofficial">Github Pages</a> <img src="/assets/images/github.png" style="margin-bottom: -4px;">
+	Site hosted by <a href="http://github.com/Kfeavel/PM-Unofficial">Github Pages</a> <img src="http://pmunofficial.com/assets/images/github.png" style="margin-bottom: -4px;">
   </footer>
  
 <script>
