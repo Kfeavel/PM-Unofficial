@@ -126,7 +126,6 @@ $( "#devVersNum" ).load( "/version.php", function() {
 									href: item.channel.channel_link,
 									target: '_blank'
 								}
-								
 							),
 							{
 								class: 'streamblock'
@@ -155,7 +154,6 @@ $( "#devVersNum" ).load( "/version.php", function() {
 									href: item.channel.url,
 									target: '_blank'
 								}
-								
 							),
 							{
 								class: 'streamblock'
@@ -166,6 +164,29 @@ $( "#devVersNum" ).load( "/version.php", function() {
 				});
 			}
 		});
+		if($(".streampage>section:last-child").children().length <= 0){
+			var block = buildHTML("div",
+				buildHTML("a",
+					buildHTML("div","Check back later",{class:"streamtitle"}) +
+					buildHTML("div","",{class:"streamviewers"}) +
+					buildHTML("div","No Live Streams",{class:"streamname"}) +
+					buildHTML("div",{class:"streamthumb"}) +
+					buildHTML("img",
+						{
+							src:"http://pmunofficial.com/assets/images/projectm-thumbnail.png",
+							style: "opacity: 0.5;"
+						}),
+					{
+						href: "#",
+						target: '_blank'
+					}
+				),
+				{
+					class: 'streamblock'
+				}
+			);
+			$(".streampage>section:last-child").append(block);
+		}
    	});
    </script>
   
