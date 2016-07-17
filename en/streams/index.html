@@ -110,7 +110,7 @@ $( "#devVersNum" ).load( "/version.php", function() {
 		var twitchStreamData = 0;
    		$.ajax({
 			datatype: "jsonp",
-			url: "https://api.hitbox.tv/media/live/list?liveonly=true&filter=recent&game=project-m&limit=100",
+			url: "https://api.hitbox.tv/media/live/list?game=50024&limit=10",
 			success: function(data){
 				hitboxStreamData = jQuery.parseJSON(data);
 				if(hitboxStreamData.success){
