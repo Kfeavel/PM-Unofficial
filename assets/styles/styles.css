@@ -518,7 +518,7 @@ nav.menu li a:hover {
 }
 
 .centered {
-  position: fixed;
+  position: relative;
   top: 50%;
   left: 50%;
   /* bring your own prefixes */
