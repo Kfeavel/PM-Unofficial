@@ -27,6 +27,11 @@ body {
   margin-right: auto;
   width: 960px;
 }
+.container_stage {
+  position: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* `Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
