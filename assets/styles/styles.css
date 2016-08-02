@@ -358,7 +358,11 @@ nav.menu li a:hover {
 
 .stage_list { text-align: center; }
 .stage_list > section > img { margin: 0px 2px; }
-.stage_list section { vertical-align: top; }
+
+.stage_list section {
+	vertical-align: top;
+	padding: 10px 130px;
+}
 
 .stage_list a {
 	margin: 2px;
