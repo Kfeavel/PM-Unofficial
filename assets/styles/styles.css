@@ -361,15 +361,15 @@ nav.menu li a:hover {
 
 .stage_list section {
 	vertical-align: top;
-	padding: 10px 130px;
+	padding: 10px;
 }
 
 .stage_list a {
 	margin: 2px;
 	display: inline-block;
 	position: relative;
-	width: 90px;
-	height: 60px;
+	width: 120px;
+	height: 80px;
 	overflow: hidden;
 	border: 1px solid transparent;
 	-moz-transition: border .15s;
@@ -378,7 +378,7 @@ nav.menu li a:hover {
     transition: border .15s;
 }
 
-.stage_list img { width: 90px; margin-top: -15px; }
+.stage_list img { width: 120px; margin-top: -15px; }
 
 .stage_list a:hover { border: 1px solid white; }
 
