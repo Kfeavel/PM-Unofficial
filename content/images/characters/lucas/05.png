@@ -83,7 +83,7 @@
                           <div class="col-sm-6" style="padding-top:13px;">
                             <form style="position:relative;" onsubmit="if(''==$('#nav-wb-url').val()){$('#nav-wb-url').attr('placeholder', 'enter a web address')} else {document.location.href='//web.archive.org/web/*/'+$('#nav-wb-url').val();}return false;">
                               <span class="iconochive-search"  aria-hidden="true"></span><span class="sr-only">search</span>                              <label for="nav-wb-url" class="sr-only">Search the Wayback Machine</label>
-                              <input id="nav-wb-url" class="form-control input-sm roundbox20" type="text" placeholder="http://www." name="url" onclick="$(this).css('padding-left','').parent().find('.iconochive-search').hide()"/>
+                              <input id="nav-wb-url" class="form-control input-sm roundbox20" type="text" placeholder="https://www." name="url" onclick="$(this).css('padding-left','').parent().find('.iconochive-search').hide()"/>
                             </form>
                           </div>
                         </div><!--/.row-->
@@ -420,7 +420,7 @@
 	<hr />
 	The machine that serves this file is down. We're working on it.
   
-  Details: <a href="http://archive.org/details/NO404-WKP-20151003101537-crawl345/NO404-WKP-20151003103813-03785.warc.gz">NO404-WKP-20151003101537-crawl345/NO404-WKP-20151003103813-03785.warc.gz</a>
+  Details: <a href="https://archive.org/details/NO404-WKP-20151003101537-crawl345/NO404-WKP-20151003103813-03785.warc.gz">NO404-WKP-20151003101537-crawl345/NO404-WKP-20151003103813-03785.warc.gz</a>
   
 	<hr />
 	</div>
