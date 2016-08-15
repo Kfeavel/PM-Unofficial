@@ -1,6 +1,6 @@
 /*
   960 Grid System ~ Core CSS.
-  Learn more ~ http://960.gs/
+  Learn more ~ https://960.gs/
 
   Licensed under GPL and MIT.
 */
@@ -613,7 +613,7 @@ body {
 /* `Clear Floated Elements
 ----------------------------------------------------------------------------------------------------*/
 
-/* http://sonspring.com/journal/clearing-floats */
+/* https://sonspring.com/journal/clearing-floats */
 
 .clear {
   clear: both;
@@ -624,7 +624,7 @@ body {
   height: 0;
 }
 
-/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+/* https://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
 
 .clearfix:before,
 .clearfix:after,
