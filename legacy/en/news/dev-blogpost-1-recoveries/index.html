@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - 3.5 Design Blogpost #1: Recoveries</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectm.kfeavel.com/assets/styles/960.css" />
+  <script src="http://projectm.kfeavel.com/assets/jquery.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectm.kfeavel.com/en/"><img src="http://projectm.kfeavel.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectm.kfeavel.com/en/">Home</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/about">About</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/download">Download</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/characters">Characters</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/stages">Stages</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.5</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>3.5 Design Blogpost #1: Recoveries</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">August 3, 2014</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectm.kfeavel.com/en/news/dev-blogpost-1-recoveries"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=3.5 Design Blogpost #1: Recoveries http://projectm.kfeavel.com/en/news/dev-blogpost-1-recoveries %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectm.kfeavel.com/en/news/dev-blogpost-1-recoveries"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p>Hey everyone! Project M Development Team here with an update on some of the things you can expect from our next release. We aren't quite ready to reveal the release date or specific content planned at this time – rather, over the course of the next few weeks we’d like to start by talking with you about our design goals.<br /><br />
+In general we’re aiming to tighten up the game and bring it even further in line with our original vision. Here’s a copy of our original mission statement, taken from the “about” page of our website:</p>
+
+<ul class="numberlist"><li>A fast-paced game</li>
+<li>with flowing, natural movement</li>
+<li>where the player has a great degree of control over their character due to the technical skill that they've achieved.</li>
+<li>The balance of offense and defense changes depending on the exact matchup and playstyle, but overall tends to favor offense slightly.</li>
+<li>Offstage edgeguarding is risky but rewarding, while on-stage edgeguarding is safer but less rewarding.</li>
+<li>Recoveries generally require great skill to use, with the advantage usually being with the edgeguarding player, with some exceptions.</li>
+<li>The combos are challenging and spontaneous, with anything longer than 2-3 hits requiring a knowledge of both characters' options and some degree of prediction and/or a deep understanding of the mental aspect of the game.</li></ul>
+
+<p><br /><br />
+Today, we’d like to talk specifically about #6, recoveries. The most common complaint leveled against PM is undoubtedly that “the recoveries are too good”, and we are inclined to agree. The first issue is that starting off with a full, viable, post-Brawl roster instantly introduces far more characters with “good” recoveries than some veteran players are comfortable with. The second issue is that we’ve often designed PM with onstage gameplay in mind first, and offstage gameplay second, and in the process of giving lower mobility characters essential approach options we’ve admittedly been shortsighted on how some of those options can give recovering characters too much freedom.<br /><br />
+<center><br />
+<img src="http://projectm.kfeavel.com/content/images/news/recoveries1.png" /><br />
+</center></p>
+
+<p><br /><br />
+The goal is that the recovering victim should have just enough options that they feel a certain pressure to combine their limited recovery moves in ways that can surprise the edgeguarder, and earn their way back on to the stage. It takes skill and creativity, and in many ways the high-risk offstage game full of low percentage kills, mixups, and sudden attacker-victim reversals best defines what is so unique about Smash Bros as a fighting series. Curiously, the game was originally programmed to play an audience “Woah!” noise when someone makes it back to the stage from far away – we want the real audience to feel that excitement more often, too.<br /></p>
+
+<p><center><br />
+<img src="http://projectm.kfeavel.com/content/images/news/recoveries2.jpg" /><br />
+</center></p>
+
+<p><br /><br />
+You might’ve noticed that we keep putting “good” recoveries in quotation marks. Why? Because recoveries come in so many different shapes and sizes that it’s difficult and potentially even misleading to reduce so much complexity to simply “good” or “bad”. In order to assess disparate recoveries we really have to look at the total interaction of many factors including: recovery startup, ending/landing lag, linearity, timing flexibility, horizontal and vertical distance, hitbox protection, armor, sweet spot safety/ledgegrab box size &amp; disjoint, character weight, fallspeed, air jumps, air drift speed, and more. Each character requires a little trimming here and there in different ways and there will obviously still be a large range of diverse recoveries, from long range floaty recoveries to short beefy ones and everything in between. While there is no infallible litmus test for whether a recovery is appropriately “good” or “bad” enough, we’re endeavoring to get as many characters as possible to that critical point where the pressure of limited options inspires skillful, creative play.<br /></p>
+
+<p><center><br />
+<img src="http://projectm.kfeavel.com/content/images/news/recoveries3.jpg" /><br />
+</center></p>
+
+<p><br /><br />
+Please keep in mind that this is an overall design refocusing, rather than a balance one. As such we are going to be changing some characters regardless of how viable or strong they are perceived to be. Rather than looking too closely at your character’s changes in a vacuum, consider the various recovery criteria detailed above and keep the global gameplay goal under consideration. How does your character now fare against the tweaked recoveries? There are just enough changes and refinements at work in the next release that characters hit harder by recovery nerfs surprisingly may not need many balance adjustments as “compensation” at all, and we are learning from our past mistakes of overbuffing/nerfing characters. We realize that the community wants to let the metagame develop unperturbed as much as possible, and so we’ve completed this global review of longevity and recovery we’ve made sure that our alterations were supported both by the general requests of the community and the guidelines of our original mission statement.<br /><br />
+Stay tuned for more info in the coming weeks, including a detailed walkthrough of a recovery that was changed, further discussion of design goals, coding advancements, overall balancing, and more!<br /><br />
+-The PM Dev Team</p>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+
+</body>
+
+</html>

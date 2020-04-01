@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - 3.6 Development, Unexpected Hurdles, and Development Team Applications</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectm.kfeavel.com/assets/styles/960.css" />
+  <script src="http://projectm.kfeavel.com/assets/jquery.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectm.kfeavel.com/en/"><img src="http://projectm.kfeavel.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectm.kfeavel.com/en/">Home</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/about">About</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/download">Download</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/characters">Characters</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/stages">Stages</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.6 Beta</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>3.6 Development, Unexpected Hurdles, and Development Team Applications</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">June 12, 2015</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectm.kfeavel.com/en/news/3-6-development-hurdles-and-applications"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=3.6 Development, Unexpected Hurdles, and Development Team Applications http://projectm.kfeavel.com/en/news/3-6-development-hurdles-and-applications %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectm.kfeavel.com/en/news/3-6-development-hurdles-and-applications"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p>In the midst of all the bustling activity back here, the PMDev Team would like to go into detail concerning why 3.6 has yet to be released. Back in March there was a video premiere, and since that time there has been radio silence. More time than we would like has already passed and we feel obligated to make this announcement.<br /><br /></p>
+
+<p>Our intent with 3.6 was to release relatively shortly after the trailer reveal. At that time we had no inclination to believe 3.6 was not ready, but as we work to improve finer and finer points of Project M, curve-balls are an increasingly regular occurrence in this work, and we were hit by one. Mechanically, throws in Brawl are tricky to say the least. Specifically, throw release points. In Brawl, throw release points are static, which means that they don’t change with the character being thrown. That said, many characters have different bone structures which are used as reference on grab and throw animations cast-wide. Every throw animation can sensibly affect how throws work, sending characters too high or low, also too far or close to the thrower through warping as you throw the opponent. ROB, for instance, is the most peculiar case of strange bone structure in relation to grabs. This problem was identified shortly after the release of the trailer, and while our coders are hard at work fixing these throw issues now, the rest of the team has been taking advantage of the additional time and instead adding even more new content and general game polishing that otherwise would not have been a part of 3.6. As a note, this additional content does not mean any changes to the size of the roster going from 3.5 to 3.6.<br /><br /></p>
+
+<p><center><br />
+<img src="http://projectm.kfeavel.com/content/images/news/throw-release-points.gif" /> </p>
+
+<p><em>Throw release points are warped as demonstrated with ROB</em></p>
+
+<p></center><br /></p>
+
+<p>It really boils down to one thing: We aren't satisfied with releasing 3.6 in its current form, despite it being mostly playable. 3.6 is the best version of Project M yet, but it wouldn't be nearly as good without the extra time we have spent working on it. For us, it is not an uncommon thing to miss our internal deadlines. What we fall short of by way of time, we make up for with quality, and our high standards have been our very first priority. Speaking of time and internal deadlines, this leads us into our next topic of announcement.<br /><br />
+As soon as version 3.6 is released we will be re-opening applications to the PMDev Team. As the years press on, our roster of team members continues to change, with a number of members having to move on to other projects, and it is showing in our time efficiency. More details will be made concerning this soon, but please note applications are only being accepted after the release of 3.6.<br /></p>
+
+<p>Thank you for your patience, and be confident that when 3.6 is released it will be the most impressive version of Project M yet. When you may ask? Stick around in the next week to learn more!<br /><br /></p>
+
+<ul>
+<li>The PMDev Team.</li>
+</ul>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+
+</body>
+
+</html>

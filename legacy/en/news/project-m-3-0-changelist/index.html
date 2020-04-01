@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - Project M 3.0 Changelist</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectm.kfeavel.com/assets/styles/960.css" />
+  <script src="http://projectm.kfeavel.com/assets/jquery.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectm.kfeavel.com/en/"><img src="http://projectm.kfeavel.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectm.kfeavel.com/en/">Home</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/about">About</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/download">Download</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/characters">Characters</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/stages">Stages</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.5</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>Project M 3.0 Changelist</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">December 9, 2013</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectm.kfeavel.com/en/news/project-m-3-0-changelist"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=Project M 3.0 Changelist http://projectm.kfeavel.com/en/news/project-m-3-0-changelist %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectm.kfeavel.com/en/news/project-m-3-0-changelist"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p>Hey everyone, here's the full changelog for Demo 2.6b -> Project M 3.0. <br />
+<b>Note:</b> If there is no changelog for a character, that character received no changes in the transition.</p>
+
+<p><br /></p>
+
+<div class="changelog toggle">
+  <b>General Character, Gameplay Mechanics, and Additions</b>
+  <div class="collapse">
+<br />- Shield Pushback and Health now match Melee. Some moves that had Shield Damage previously compensated.
+<br />- Fixed a bug related to Stage Collision Detection (landing detection) that caused characters to lose height while in certain animations
+<br />- The Sleep status duration can now be reduced by mashing
+<br />- Wall Clings are now limited to one use per airtime
+<br />- Maximum tether hangtime was halved
+<br />- Forced Tether Jump upon reel-in no longer has IASA or refreshes a double jump
+<br />- Fixed a bug with Meteor Canceling where multijump characters were unable to meteor cancel with normal jumps after they used their first jump
+<br />- Implemented a new HUD with cleaner stock icons
+<br />- Turbo Mode now replaces Curry Mode in Special Versus. Cancel your attacks on-hit for new combo possibilities!
+<br />- Character AI improved across the board in various ways
+<br />- Computer players no longer have a preference for ganging up on human players
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Stages</b>
+  <div class="collapse">
+<br />- The camera on all stages was sped up slightly
+<br />- SSE Jungle was reskinned with Pikmin elements. Renamed "Distant Planet"
+<br />- Pokémon Stadium 1 moved back to page 1
+<br />- Added Peach's Castle to Page 2, replaces Mario Circuit
+<br />- Added Training Stage to Page 2
+<br />- Norfair's platforms now expand and contract further and into more positions. The main platform is larger with a new model, and the entire stage was lowered relative to the blastzones
+<br />- Widened the side blastzones of Metal Cavern
+<br />- Slightly raised the ceiling blastzone of Warioware
+<br />- Raised the ceiling blastzone of the following stages: Distant Planet, Yoshi's Island, Castle Siege, Green Hill Zone, Halberd, Rumble Falls, Norfair, Skyworld, Skyloft, Lylat, Metal Cavern, and Smashville
+<br />- Significantly raised the ceiling blastzone of Dracula's Castle
+<br />- Numerous Aesthetic improvements to Fountain of Dreams
+</collapse>
+ </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Items</b>
+  <div class="collapse">
+Bumper
+<br />- Bumper does slightly more damage, but deals much less knockback and sends foes sideways
+
+<br />- When set, Bumper sends foes at a higher angle with slightly increased knockback growth
+
+<br />- Hitbox slightly smaller
+<br /><br />
+SuperSpicy Curry
+<br />- Now activates Turbo instead of spitting Flames. Renamed "Turbo" with a new appearance
+
+<br /><br />
+Deku Nut
+
+<br />- All hitboxes now blockable
+
+<br />- Explosion has less weight knockback and slightly less knockback growth
+
+<br /><br />
+Soccer Ball
+<br />- Flame hitbox is significantly weaker
+
+<br /><br />
+Carrier Boxes
+<br />- Rolling hitbox has less base knockback and knockback growth
+
+<br /><br />
+Cracker Shot
+<br />- Fireworks deal slightly less knockback can now be absorbed.
+
+<br /><br />
+Golden Hammer
+<br />- Damage reduced to 20 from 30.
+
+<br /><br />
+Star Rod
+<br />- Trajectory when hit by tossed Star Rod is higher.
+
+<br />
+Party Ball
+<br />- Disappears instead of exploding
+
+<br /><br />
+Assist Trophies and Pokemon:
+<br />
+Snorlax:
+<br />- Rising hitbox is weaker, while Body Slam hitbox is stronger
+
+<br /><br />
+Torchic:
+<br />- Fire Spin loops every 16 frames instead of 10 and ending hitbox is weaker
+
+<br /><br />
+Knuckle Joe:
+<br />- Vulcan/Rapid Jab's base damage was halved, SDI ability significantly higher and has reduced knockback growth with later hits being softer
+<br />- Smack Punch and its projectile have less knockback
+
+<br /><br />
+Latios and Latias:
+<br />- Wind hitboxes removed
+
+<br /><br />
+Weavile:
+<br />- Stun effect removed
+<br />- Hitbox now pops people upwards a bit and does less shield damage
+
+<br /><br />
+Metagross:
+<br />- Burying hitbox removed when Metagross in on the ground already
+
+<br /><br />
+Meowth:
+<br />- Pay Day damage reduced and has knockback growth
+
+<br /><br />
+Piplup
+<br />- Hitbox refreshes every 8 frames instead of 7
+<br />- SDI Multiplier significantly increased
+
+<br /><br />
+Isaac:
+<br />- Adjusted the Synergy angle to be 30 degrees to compensate for higher gravity and up the SDI multiplier to 1.02
+
+<br /><br />
+Saki:
+<br />- Second Sword Attack now has less knockback growth and more base knockback
+<br />- Saki's Shots are now using Raygun shot GFX
+</collapse>
+ </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Bowser</b>
+  <div class="collapse">
+<br />- Dash length very slightly shortened
+<br />- Dash grab reverted to pre-2.6 animation and tweaked for readability. Bowser grabs slightly later, but grab range should now match animation properly
+<br />- Up Tilt initial knockback stats increased to match Melee’s. Frame timing adjusted so that the move degrades sooner, when Bowser is swiping above his head
+<br />- Neutral Air knockback stats reduced to be closer to Melee’s
+<br />- Back Air’s IASA timings delayed to match Melee’s
+<br />- Forward Air’s hitboxes restructured into a tipper format. The inner “flub” hitboxes have damage and knockback approximating Melee’s hitboxes, while the tipper hitbox has damage and comparable knockback to PM 2.5’s forward air
+<br />- Forward air now has a claw trail that traces the hitbox arc
+<br />- Whirling Fortress edgehog behavior changed to no longer auto-snap to ledges. Requires some finesse to fortress hog now
+<br />- Grounded Whirling Fortress initial hitboxes further shrunk and later hitbox coverage restructured to match the animation better
+<br />- Aerial Whirling Fortress hitboxes redone to reduce vertical coverage and slightly increase horizontal reach
+<br />- Whirling Fortress animation has slight tweaks for polish
+<br />- Flamebreath hitboxes redone. They now start with lower damage but gain damage as they travel, being strongest at the tip. Grounded foes are now pushed down and out of the flames
+<br />- Aerial Flamebreath hitboxes have unaltered knockback behavior, but have the scaling damage and no longer flinch at the tip
+<br />- Aerial Koopa Klaw has slightly less horizontal movement
+<br />- Giga Bowser can now be damaged normally. As compensation, his moveset was improved and his Final Smash duration almost doubled
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Captain Falcon</b>
+  <div class="collapse">
+   <br />- Side-B landing lag slightly reduced upon connecting with an opponent, now is the same for Side-B whiff or hit
+<br />- Grounded Falcon kick endlag is slightly longer
+<br />- Falcon Kick is now B-reversible
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Charizard</b>
+  <div class="collapse">
+<br />- FAir bone invincibility reduced to the duration of the active frames of the hitbox
+<br />- Forward throw animation tweaked
+<br />- Up B has less hangtime at the apex
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Diddy Kong</b>
+  <div class="collapse">
+<br />- Shield size increased
+<br />- Jab angles and damage adjusted to better link into each other. Final jab (the kick) knockback increased
+<br />- Dash Attack's hitboxes link more reliably and have had their sizes increased slightly. Grounded version can be interrupted earlier
+<br />- Forward Tilt's hitbox sizes increased slightly. Forward and high versions have their damages increased slightly
+<br />- Up Smash's hits link more reliably
+<br />- Diddy steps more forward on the second hit of Forward Smash. The first hit's knockback and timing changed to better link into the farther-reaching second hit
+<br />- Forward Air's base knockback increased slightly
+<br />- Down Air's active frames activate slightly earlier
+<br />- Down Throw base knockback lowered but has higher knockback growth. Damage redone to be a two-hit move
+<br />- Up Throw sends up and slightly forward
+<br />- Neutral B (Peanut Popgun): Air Dodge window activates slightly earlier
+<br />- Side B (Monkey Flip): Tilt version now sends the same distance as the Smash version. You can now however hold back while jumping to shorten your overall distance. Attack ("A") Throw's trajectory moved inward slightly. Jump Throw knockback growth and damage increased significantly, and Diddy's jump height has been reduced
+<br />- Up B (RocketBarrel Boost): Grounded startup reduced. Increase in damage from charging made slightly faster. Meteor hitbox more accurately reflects the blast graphic effects
+<br />- Down B (Banana Toss): Grounded banana hits induce the trip effect and retain weight-dependent knockback. Aerial banana hit knockback slightly increased
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Donkey Kong</b>
+  <div class="collapse">
+<br />- Jab1 links more reliably into Jab2
+<br />- Grounded Dash Attack Jump-Cancel removed
+<br />- Dash Attack (ground & air) sweet/sourspot roles reversed from previously. Sweetspot now sends upward and has slightly less duration, sourspot sends outward
+<br />- Neutral Air bone invincibility duration reduced significantly
+<br />- Up-B travels less horizontal distance, but gains more height. SDI multipliers on grounded multi-hits reduced to be normalized
+</div>
+</div>
+
+<div class="changelog toggle">
+ <b>Falco</b>
+  <div class="collapse">
+<br />- Shine start-up animation has been improved
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Fox</b>
+  <div class="collapse">
+<br />- Laser duration now matches Melee
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Ganondorf</b>
+  <div class="collapse">
+<br />- Forward Air's animation was polished. Active frames begin and terminate a frame earlier to better match the animation
+<br />- Down Air's animation was polished
+<br />- Up B start-up is slightly faster
+<br />- When suiciding with Ganon's side B, he should always die first
+<br />- Wizard Foot Damage increased on both ground and air kicks, knockback compensated to be the same
+<br />- Wizard Foot is now B-reversable
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Ike</b>
+  <div class="collapse">
+<br />- Down Tilt IASAs slightly later
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Ivysaur</b>
+  <div class="collapse">
+<br />- Increased aerial drift strength and decreased aerial friction
+<br />- Slightly decreased grounded friction
+<br />- Fall speed slightly increased, and fastfall speed increased
+<br />- Forward Tilt endlag increased
+<br />- Forward Tilt back hitbox and the innermost front hitbox have increased SDI multipliers
+<br />- Forward Tilt back final hitbox damage decreased to match earlier weak hits
+<br />- Down Tilt's 2nd hit now only pops up at the outer 2 hitboxes instead of outer 3 hitboxes
+<br />- Neutral Air final hit knockback growth decreased
+<br />- Forward Air startup increased
+<br />- Forward Air hitbox angles have been noticeably lowered to send further horizontally
+<br />- Forward Air damage increased by 1
+<br />- Forward Air base knockback increased , knockback growth decreased
+<br />- Back Air closer endlag mostly reverted to v2.5. Still allows a small window to short-hop Back Air autocancel
+<br />- Back Air send off hits have increased base knockback, and the inner trajectory has been lowered
+<br />- Back Air outer hitbox damage increased to 5
+<br />- Up Air sweetspot Knock back growth and damage increased. Hitbox size decreased, with the sweetspot deeper inside Ivysaur. Sourspot angle decreased
+<br />- Up Air no longer halts horizontal momentum on fall
+<br />- Up Air meteor hitboxes redone <br />- now two side-by-side hitboxes that maintain horizontal coverage with negative disjoint on the bottom
+<br />- Down Air cooldown increased
+<br />- Down Air damage increased and homogenized against grounded and aerial targets to 7
+<br />- Down Air sweetspot size decreased, with the sweetspot deeper inside Ivysaur
+<br />- Grabs <br />- outer 2 of 5 boxes on standing & pivot grab + outer 1 box of 3 on dash grab are ground-only to alleviate CG issues
+<br />- Forward Throw knockback lowered to match 2.6 B-Throw
+<br />- Back Throw knockback growth increased
+<br />- Up Throw angle increased to send slightly behind Ivysaur
+<br />- Up Throw knockback growth decreased
+<br />- Down Throw knockback growth increased
+<br />- Neutral-B startup hit is now a relatively weak windbox
+<br />- Neutral-B max charge lowered from 22% to 18%
+<br />- Aerial Neutral-B land-cancels only if the Special Button is not held
+<br />- Forward-B checks if existing leaf is out on frame 1 instead of 15.
+<br />- Forward-B hit refresh rate slower , damage increased per hit by 1, hit angle increased to send further vertical
+<br />- Forward-B Razor Leaf slowed down to v2.5 timings; physics/floats ported from v2.5, but lasts 5 frames longer
+<br />- Up-B sweetspot hitbox size slightly increased
+<br />- Up-B sweetspot damage increased to 18
+<br />- Down-B seeds rise slower, do not go as high, and fall more slowly as well
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Jigglypuff</b>
+  <div class="collapse">
+<br />- Sing sleep power increased to compensate the sleep mechanic changes
+ </div>
+</div>
+
+<div class="changelog toggle">
+ <b>King Dedede</b>
+  <div class="collapse">
+<br />- Forward Smash’s meteor hitbox now only hits grounded targets (Aerial-only Spike hitbox on hammer head now has proper priority)
+<br />- Forward air’s hitboxes were cleaned up and polished to match the animation better
+<br />- Aerial Up B no longer has medium armor. Grounded Up B medium armor starts and ends much sooner
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Link</b>
+  <div class="collapse">
+<br />- All sword attacks are now correctly clankable
+<br />- Forward tilt does slightly more damage at the base of the sword, and slightly less on Link's shoulder
+<br />- Up Tilt's base knockback slightly lowered on all hitboxes
+<br />- Up Tilt's knockback growth changes slightly based on where you hit on the sword as per Melee/Brawl
+<br />- Down Smash's first hit outer hitboxes dropped from 17 to 16 damage. (Sweetspot is on elbow)
+<br />- Down Smash's second hit has 17 damage sweetspot added to inside hit. Slightly dropped knockback growth on all second hits.
+<br />- Up Smash: IASAs slightly later, last swing inner hit from 9 damage to 10
+<br />- Back air IASAs two frames earlier, second kick angle slightly lowered
+<br />- Down Air's hitboxes moved to better match Melee and cover his sword
+<br />- Dash attack's hitbox active one additional frame, slightly later IASA
+<br />- Dash attack's damage now increases on the closest hitboxes
+<br />- Dash attack's angle now decreases on the closest hitboxes
+<br />- Link can correctly angle his boomerang downward on the ground
+<br />- Shrank hitbox size on boomerang's "flub slap"
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Lucario</b>
+  <div class="collapse">
+<br />- Lucario starts each stock with an Aura charge
+<br />- Neutral Air is now a multi-hit aerial with similar power
+<br />- Up throw has slightly less endlag
+<br />- Down throw has slightly less total duration
+<br />- Fully charge Aura Sphere travels slightly slower
+<br />- Aura Sphere charging scales travel speed slightly more quickly
+<br />- Down B has less startup and is invincible slightly longer. Same total duration
+<br />- Wallcling can no longer be activated out of Up B Ending
+<br />- Final Smash beam is larger, turns faster and further, and is more powerful
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Lucas</b>
+  <div class="collapse">
+<br />- Down-b repeating hitbox refresh rate was reduced
+<br />- Down-b shield damage was significantly reduced
+<br />- Fixed a bug that prevented the >100% ledgeroll animation from completing
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Luigi</b>
+  <div class="collapse">
+<br />- Storing Misfires for later now requires shield to be held, but you can misfire OR store a misfire during any part of the charging animation. The misfire indicator flash now repeats until the charge is full
+<br />- Increased the size of down taunt's hitbox to hit below ledges better
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Mario</b>
+  <div class="collapse">
+<br />- Forward Smash hitlag modifier has been reduced slightly to be normalized.
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Mr. Game & Watch</b>
+  <div class="collapse">
+<br />- Weight slightly increased
+<br />- Dash lengthened
+<br />- Forward Smash loop hitboxes removed, now possesses a weaker late flub hitbox
+<br />- Neutral B uses Heavy Landing lag (4 frames) instead of instantly switching to Wait upon landing
+<br />- Super food removed
+<br />- 3 hammer's shield damage reduced
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Pikachu</b>
+  <div class="collapse">
+<br />- Skull Bash can now grab ledges, reinstated from Brawl
+<br />- Quick Attack's animation stretches less and his tail is now intangible during travel
+<br />- Quick Attack Cancel tweaked to compensate for the SCD bugfix
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Pit</b>
+  <div class="collapse">
+<br />- Fixed animation glitches during Forward Smash 2 and angled Forward Tilts
+<br />- Standing Grab range slightly increased
+<br />- Down Tilt meteor sweetspot reduced in knockback. Tipper knockback behavior homogenized to be a standard launcher
+<br />- Down Tilt IASA added two frames before the move ends
+<br />- Up Smash final hit knockback increased
+<br />- Neutral Air revamped as a more traditional “drill” move. Hits an additional time, linking knockback tweaked for consistency, hitboxes cleaned up and sync’d to his blades, and the final hit has reduced knockback and hitlag
+<br />- Down Air spike sweetspot has increased knockback and the trajectory was raised to send further outward
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>R.O.B.</b>
+  <div class="collapse">
+<br />-Back Air vertical momentum canceling returned (reverted to 2.5)
+<br />-Down Airs after the first give a smaller vertical boost, do 2 less damage, and have slightly smaller hitboxes. Refreshes upon landing on stage
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Snake</b>
+  <div class="collapse">
+<br />- Up Tilt reanimated for polish
+<br />- Forward Smash reanimated for polish
+<br />- Forward Smash start up very slightly decreased
+<br />- Neutral air's last hit sends at a slightly lower angle
+<br />- Forward air has reduced knockback growth
+<br />- Standing grab has much less reverse range
+<br />- C4 aerial stick hitbox moved up and slightly in
+<br />- Nikita side B replaced with Tranquilizer Gun
+<br />- Tranquilizer gun has a 3 dart clip that can be reloaded prematurely by holding shield within six frames starting side B
+<br />- Up taunt replaced with a cigarette smoking taunt
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Sonic</b>
+  <div class="collapse">
+<br />- Sonic’s aerial mobility was slightly increased
+<br />- Neutral Air hits one frame sooner and stays strong slightly longer. The Initial hitboxes were slightly increased in size, and knockback on all hits tweaked to aid in comboing and late-percent kills
+<br />- Neutral Air now has a small initial sweetspot that deals 15 damage with strong knockback and has neutral frame advantage on block
+<br />- Neutral Air animation tweaked for polish
+<br />- Back Air has increased start up reminiscent of Brawl’s, and increased damage and knockback on all hitboxes. IASA window starts two frames earlier
+<br />- Forward Air’s early sweetspot has reduced knockback growth
+<br />- Up Air's knocback trajectory slightly raised to be straight vertical. Both Sweet and sour spots have increased knockback growth
+<br />- Homing attack lock-on range reduced by about 1/3
+<br />- When Homing or Blast attack collides with a floor, Sonic rebounds instead of flattening to the stage
+<br />- Spin Maneuver’s Jump-cancel frame-lock no longer resets upon landing mid-move. Sonic also flashes when the frame-lock ends
+<br />- Spring attack use is now reset if Sonic is grabbed
+<br />- Spin Dash knockback stats and trajectory tweaked to aid in comboing
+<br />- Spin Dash's Spin Jump no longer allows the cstick to input double jumps
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Squirtle</b>
+  <div class="collapse">
+<br />- Due to the SCD bugfix, much of Squirtle’s moveset required physics compensations. His gravity was also slightly increased
+<br />- List of compensated moves: Withdraw, Withdraw jump, Withdraw rebound, Aqua Jet, Waterfall, double jump
+<br />- Tech rolls adjusted so that the movement occurs slightly later in the animation
+<br />- Dash length significantly shortened. As a result, Shell Shift requires less commitment to input
+<br />- Crawl Attack’s input made easier
+<br />- Standing grab reverse/inside range increased
+<br />- Downsmash IASA removed and cooldown increased
+<br />- Withdraw jump can now be input during Withdraw turn once Squirtle has changed directions
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Toon Link</b>
+  <div class="collapse">
+<br />- All sword attacks are now correctly clankable
+<br />- Fast Fall Velocity increased
+<br />- Forward Tilt has slightly less base knockback on inside hits
+<br />- Forward Tilt now does more damage closer to the tip
+<br />- Forward Tilt's knockback growth slightly increased on all hits
+<br />- Up Tilt has slightly less endlag
+<br />- Up Tilt's base knockback increased and knockback growth lowered
+<br />- Up Tilt's angle now increases closer to the tip
+<br />- Forward Air has less startup
+<br />- Down Air's hitboxes moved in to better center them around Toon Link/his sword
+<br />- Up throw's speed is now properly weight dependent
+<br />- Up throw has less endlag
+<br />- Up Special's second hitbox lasts one less frame
+<br />- Up Special's last hitbox does more damage, with less hitlag and weaker SFX
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Wario</b>
+  <div class="collapse">
+<br />- Down Tilt endlag slightly increased. Hit duration decreased
+<br />- Forward Tilt hit duration decreased
+<br />- Down Smash endag slightly increased. Sweetspot no longer hits aerial opponents
+<br />- Forward Aerial endlag slightly increased
+<br />- Up Aerial endlag slightly increased
+<br />- Up Throw does slightly less damage
+<br />- Bite Throw trajectory lowered slightly
+<br />- Waft: Charge-up time cut in half. Each Waft level reduced in damage/knockback/hitbox size/vertical height gain appropriately
+<br />- Can no longer crouch out of Shoulder Charge
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Wolf</b>
+  <div class="collapse">
+<br />- Up B's base knockback reduced
+<br />- Up B now correctly depletes Wolf's double jump
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Zelda</b>
+  <div class="collapse">
+<br />- Forward Tilt's sweetspots have less knockback growth
+<br />- Forward Air's strongest sweetspot has slightly less knockback growth
+<br />- Back Air's strongest sweetspot has slightly less base knockback
+<br />- Nayru's Love's final grounded hit has normalized SDI modifiers
+<br />- Nayru's Love's aerial land cancel has slightly more lag
+<br />- Din's Fire static hitboxes do 2 less damage
+<br />- Transform now detonates all Din's Fire currently on screen
+<br />- Uptaunt's hitboxes pull in further towards Zelda
+  </div>
+</div>
+
+<div class="changelog toggle">
+ <b>Zero Suit Samus</b>
+  <div class="collapse">
+<br />- Downsmash's knockback tweaked to always stun a grounded opponent
+<br />- Neutral Air's whip is now unclankable
+<br />- Forward Air's second hit trajectory lowered
+<br />- Back Air sweetspot is easier to land
+<br />- Neutral B's fully charged Blaster shot is now unclankable
+<br />- Up B's whip is now unclankable
+<br />- Down B no longer has invincibility
+<br />- Reinstated transform during Final Smash
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.collapse').hide();
+    });
+
+    $('.toggle').click(function() {
+      $( this ).children('.collapse').toggle();
+    });
+</script>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+
+</body>
+
+</html>

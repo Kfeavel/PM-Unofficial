@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Project M - Demo 2.5 Engine Optimization Controller Input Lag Fix</title>
+  <meta charset="utf-8" />
+  <meta name="description" content="Project M is a community-made mod of Brawl inspired by Super Smash Bros. Melee's gameplay designed to add rich, technical gameplay to a balanced cast of characters while additionally enhancing the speed of play." />
+  <meta name="keywords" content="smash bros, melee, brawl, competitive, fighter" />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="icon" type="image/png" href="/assets/images/fav-icon.png">
+  <link href='/assets/styles/styles.css' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="http://projectm.kfeavel.com/assets/styles/960.css" />
+  <script src="http://projectm.kfeavel.com/assets/jquery.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/jquery.cycle.lite.js"></script>
+  <script src="http://projectm.kfeavel.com/assets/chart.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+  
+  <script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-42047230-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+</script></head>
+
+<body>
+
+	<header>
+		<div class="logo"><a href="http://projectm.kfeavel.com/en/"><img src="http://projectm.kfeavel.com/assets/images/logo2.png" alt="Project M" /></a></div>
+	</header><div class="menu_div">
+	<nav class="menu container_12">
+	  <ul>
+				<li><a class="active" href="http://projectm.kfeavel.com/en/">Home</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/about">About</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/download">Download</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/characters">Characters</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/stages">Stages</a></li>
+				<li><a href="http://projectm.kfeavel.com/en/streams">Streams</a></li>
+			  </ul>
+	</nav>
+
+</div>
+
+<div class="versions">
+	<div class="publicVersion">Current Public Version: 3.5</div>
+	<div class="devVersion">Current Developer Version: <div id="devVersNum"></div></div>
+</div>
+
+
+<script type="text/javascript">
+$( "#devVersNum" ).load( "/version.php", function() {
+});
+</script>
+<div class="main">
+
+	<div class="container_12">
+		<div id="sidebar" class="grid_4">
+	
+	<div class="content">
+		<h1>Community Links</h1>
+		<section class="external">
+			<a href="http://facebook.com/ProjectMGame" class="facebook"></a>
+			<a href="http://smashboards.com/categories/project-m.465/" class="forums"></a>
+			<a href="http://youtube.com/user/ProjectMelee" class="youtube"></a>
+			<a href="http://reddit.com/r/ssbpm" class="subreddit"></a>
+		</section>		
+	</div>
+	
+	<div class="content">
+		<h1>Twitter</h1>
+		<section>			
+			<a class="twitter-timeline" width="280px" height="400px" href="https://twitter.com/search?q=from%3A%40projectmgame" data-widget-id="342104361511567360">Tweets about from:@projectmgame</a>
+			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+		</section>		
+	</div>
+	
+</div>		
+		<article class="content grid_8">
+			<h1><p>Demo 2.5 Engine Optimization Controller Input Lag Fix</p>
+</h1>
+			<section>
+				<div class="info_block">
+					Posted: <a href="">December 24, 2012</a>
+					<div class="social_links">
+						<a target="_blank" class="social facebook" href="http://www.facebook.com/share.php?u=http://projectm.kfeavel.com/en/news/demo-2-5-engine-optimization-controller-input-lag-fix"><i class="icon-facebook"></i>Share</a>
+						<a target="_blank" class="social twitter" href="http://twitter.com/home?status=Demo 2.5 Engine Optimization Controller Input Lag Fix http://projectm.kfeavel.com/en/news/demo-2-5-engine-optimization-controller-input-lag-fix %23ProjectM"><i class="icon-twitter"></i>Tweet</a>
+						<a target="_blank" class="social reddit" href="http://reddit.com/submit?url=http://projectm.kfeavel.com/en/news/demo-2-5-engine-optimization-controller-input-lag-fix"><i class="icon-reddit"></i>Submit</a>
+					</div>
+				</div>
+				<hr />
+				<p>Magus here with another engine optimization announcement for Demo 2.5! This is a pretty big one, as you all will very quickly see come release day, though many people may not realize exactly what the big deal is. The PMBR is rather excited about this code, due to its vital contribution to competitive play. But even casual players will immediately recognize the difference it has on gameplay, so we're going to spend just a little bit of time giving a brief overview of what this code is, how we found it, and what it means for you, the players. We've been saving this update for a while to keep you from getting worked up over it. But with release right around the corner, the time has come to reveal one of the most important discoveries in the history of Project M.</p>
+
+<p><br /></p>
+
+<p>This Engine Optimization is a fix for Controller Input Delay.</p>
+
+<p><br /></p>
+
+<p>During my work on updating the code that adds analog shoulder buttons and C-stick inputs to the game, I discovered that the button press function mapped to the C-stick isn't processed immediately as one might expect, resulting in up-smashes out of shield with the new code when pressing up on the C-stick to jump using its analog input (the C-stick analog jump input was going through before the C-stick button smash). It turned out that they didn't get processed for up to two frames after the input was read by the game. Realizing the implications to competitive play, I quickly set about working on a method to fix this horrendous oversight in the game's coding. However, I soon discovered that the C-stick wasn't the only issue: ALL controller inputs were affected. You read that right. Brawl's controller input processing takes place an indeterminate number of frames, between zero and two, later than they were originally being detected. Fortunately, a fix was created to read the inputs at the place where they were first detected from the controller on the proper frame.</p>
+
+<p><br /></p>
+
+<p>This was a fairly shocking revelation to us in the PMBR. How could no one know about this? Clearly Brawl's frame buffer was helping to mask this phenomenon, and this sheds a lot of new light on the "rough, clunky" feeling that has plagued Project M for a very long time. Much of this was wrongfully attributed to the physics delay, which is still unresolved in 2.5 and admittedly contributes to the last remaining issues with Project M still not feeling quite the same as Melee. It turns out though that the primary culprit wasn't the physics delay at all, it was the controls themselves. Now that this has been rectified, every part of gameplay feels faster and more responsive. We hope you enjoy this massive improvement in Project M 2.5!</p>
+
+<p><br /></p>
+
+<p>The following video shows two characters played using a single controller, but with the input delay fix being applied only to Player 2:</p>
+
+<p><br /></p>
+
+<p><center><br />
+<iframe width="640" height="360" src="http://www.youtube.com/embed/Xw0mXL9ofKI?rel=0" frameborder="0" allowfullscreen></iframe><br />
+</center></p>
+			</section>
+		</article>
+		
+		<div class="grid_8">
+			<a href="archive">View the news archive</a>
+		</div>
+		
+	</div>
+
+</div>
+
+  <footer>
+    <p>Copyright © 2010-2015 Project M Dev Team. Website designed, created and hosted by <a href="http://warchamp7.com">Warchamp7</a></p>
+	Site powered by <a href="http://getkirby.com">Kirby</a> <img src="/assets/images/brawl_kirby.png" style="margin-bottom: -4px;">
+  </footer>
+
+</body>
+
+</html>
